@@ -22,12 +22,12 @@ CREATE TABLE `wp_term_taxonomy` (
   PRIMARY KEY (`term_taxonomy_id`),
   UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
   KEY `taxonomy` (`taxonomy`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `wp_term_taxonomy` WRITE;
 /*!40000 ALTER TABLE `wp_term_taxonomy` DISABLE KEYS */;
-INSERT INTO `wp_term_taxonomy` VALUES (1,1,'category','',0,0),(2,2,'category','',0,6),(4,4,'category','',0,2),(5,5,'post_tag','',0,5),(6,6,'post_tag','',0,1),(7,7,'post_tag','',0,3),(8,8,'post_tag','',0,1),(9,9,'post_tag','',0,1),(10,10,'post_tag','',0,1),(11,11,'post_tag','',0,1),(12,12,'post_tag','',0,1),(13,13,'category','',0,1),(14,14,'post_tag','',0,1),(15,15,'post_tag','',0,1),(16,16,'post_tag','',0,1),(17,17,'post_tag','',0,2),(18,18,'post_tag','',0,0),(19,19,'post_tag','',0,0),(20,20,'post_tag','',0,1),(21,21,'post_tag','',0,1),(22,22,'post_tag','',0,1),(23,23,'post_tag','',0,1),(24,24,'post_tag','',0,1),(25,25,'post_tag','',0,1);
+INSERT INTO `wp_term_taxonomy` VALUES (1,1,'category','',0,0),(2,2,'category','',0,6),(4,4,'category','',0,2),(5,5,'post_tag','',0,5),(6,6,'post_tag','',0,1),(7,7,'post_tag','',0,3),(8,8,'post_tag','',0,1),(9,9,'post_tag','',0,1),(10,10,'post_tag','',0,1),(11,11,'post_tag','',0,1),(12,12,'post_tag','',0,1),(13,13,'category','',0,2),(14,14,'post_tag','',0,1),(15,15,'post_tag','',0,1),(16,16,'post_tag','',0,1),(17,17,'post_tag','',0,2),(18,18,'post_tag','',0,0),(19,19,'post_tag','',0,0),(20,20,'post_tag','',0,1),(21,21,'post_tag','',0,1),(22,22,'post_tag','',0,1),(23,23,'post_tag','',0,1),(24,24,'post_tag','',0,1),(25,25,'post_tag','',0,1),(26,26,'post_tag','',0,1),(27,27,'post_tag','',0,1),(28,28,'post_tag','',0,1),(29,29,'post_tag','',0,1);
 /*!40000 ALTER TABLE `wp_term_taxonomy` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
