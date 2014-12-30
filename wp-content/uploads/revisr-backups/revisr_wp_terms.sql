@@ -18,14 +18,14 @@ CREATE TABLE `wp_terms` (
   `slug` varchar(200) NOT NULL DEFAULT '',
   `term_group` bigint(10) NOT NULL DEFAULT '0',
   PRIMARY KEY (`term_id`),
-  UNIQUE KEY `slug` (`slug`),
-  KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
+  KEY `name` (`name`),
+  KEY `slug` (`slug`)
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `wp_terms` WRITE;
 /*!40000 ALTER TABLE `wp_terms` DISABLE KEYS */;
-INSERT INTO `wp_terms` VALUES (1,'Uncategorized','uncategorized',0),(2,'Debian','debian-2',0),(4,'Other','other',0),(5,'debian','debian',0),(6,'dd-wrt','dd-wrt',0),(7,'server','server',0),(8,'markdown','markdown',0),(9,'prettify','prettify',0),(10,'moto g','moto-g',0),(11,'android','android',0),(12,'root','root',0),(13,'Android','android-2',0),(14,'yubikey','yubikey',0),(15,'sopcast','sopcast',0),(16,'streaming','streaming',0),(17,'wordpress','wordpress',0),(18,'git','git',0),(19,'backup','backup',0),(20,'wheezy','wheezy',0),(21,'java','java',0),(22,'update-alternatives','update-alternatives',0),(23,'ssl','ssl',0),(24,'certificate','certificate',0),(25,'cacert','cacert',0),(26,'adb','adb',0),(27,'unauthorized','unauthorized',0),(28,'key','key',0),(29,'systemui','systemui',0);
+INSERT INTO `wp_terms` VALUES (1,'Uncategorized','uncategorized',0),(2,'Debian','debian-2',0),(4,'Other','other',0),(5,'debian','debian',0),(6,'dd-wrt','dd-wrt',0),(7,'server','server',0),(8,'markdown','markdown',0),(9,'prettify','prettify',0),(10,'moto g','moto-g',0),(11,'android','android',0),(12,'root','root',0),(13,'Android','android-2',0),(14,'yubikey','yubikey',0),(15,'sopcast','sopcast',0),(16,'streaming','streaming',0),(17,'wordpress','wordpress',0),(18,'git','git',0),(19,'backup','backup',0),(20,'wheezy','wheezy',0),(21,'java','java',0),(22,'update-alternatives','update-alternatives',0),(23,'ssl','ssl',0),(24,'certificate','certificate',0),(25,'cacert','cacert',0),(26,'adb','adb',0),(27,'unauthorized','unauthorized',0),(28,'key','key',0),(29,'systemui','systemui',0),(30,'crontab','crontab',0),(31,'ip','ip',0),(32,'upc','upc',0),(33,'sid','sid',0),(34,'dpkg','dpkg',0);
 /*!40000 ALTER TABLE `wp_terms` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
