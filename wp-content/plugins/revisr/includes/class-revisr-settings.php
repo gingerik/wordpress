@@ -4,22 +4,22 @@
  *
  * Interacts with the WordPress Settings API.
  *
- * @package   Revisr
- * @license   GPLv3
- * @link      https://revisr.io
- * @copyright 2014 Expanded Fronts, LLC
+ * @package   	Revisr
+ * @license   	GPLv3
+ * @link      	https://revisr.io
+ * @copyright 	Expanded Fronts, LLC
  */
 
-// Disallow direct access.
+// Prevent direct access.
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 class Revisr_Settings {
-	
+
 	/**
 	 * The Settings callback class.
 	 * @var Revisr_Settings_Fields()
 	 */
-	public $settings_fields;
+	protected $settings_fields;
 
 	/**
 	 * Initialize the class.
@@ -27,10 +27,6 @@ class Revisr_Settings {
 	 */
 	public function __construct() {
 		$this->settings_fields = new Revisr_Settings_Fields();
-
-		if ( is_admin() ) {
-			add_action( 'admin_init', array( $this, 'init_settings' ) );
-		}
 	}
 
 	/**
@@ -78,13 +74,13 @@ class Revisr_Settings {
             __( 'Git Username', 'revisr' ),
             array( $this->settings_fields, 'username_callback' ),
             'revisr_general_settings',
-            'revisr_general_settings'          
-        );      
+            'revisr_general_settings'
+        );
         add_settings_field(
-            'email', 
-            __( 'Git Email', 'revisr'), 
-            array( $this->settings_fields, 'email_callback' ), 
-            'revisr_general_settings', 
+            'email',
+            __( 'Git Email', 'revisr'),
+            array( $this->settings_fields, 'email_callback' ),
+            'revisr_general_settings',
             'revisr_general_settings'
         );
         add_settings_field(
@@ -109,17 +105,17 @@ class Revisr_Settings {
     		'revisr_general_settings'
 		);
 		add_settings_field(
-            'remote_name', 
-            __( 'Remote Name', 'revisr'), 
-            array( $this->settings_fields, 'remote_name_callback' ), 
-            'revisr_remote_settings', 
+            'remote_name',
+            __( 'Remote Name', 'revisr'),
+            array( $this->settings_fields, 'remote_name_callback' ),
+            'revisr_remote_settings',
             'revisr_remote_settings'
         );
         add_settings_field(
-            'remote_url', 
-            __( 'Remote URL', 'revisr'), 
-            array( $this->settings_fields, 'remote_url_callback' ), 
-            'revisr_remote_settings', 
+            'remote_url',
+            __( 'Remote URL', 'revisr'),
+            array( $this->settings_fields, 'remote_url_callback' ),
+            'revisr_remote_settings',
             'revisr_remote_settings'
         );
         add_settings_field(
@@ -161,6 +157,13 @@ class Revisr_Settings {
 			'development_url',
 			__( 'Development URL', 'revisr'),
 			array( $this->settings_fields, 'development_url_callback' ),
+			'revisr_database_settings',
+			'revisr_database_settings'
+		);
+		add_settings_field(
+			'db_driver',
+			__( 'Database Driver', 'revisr' ),
+			array( $this->settings_fields, 'db_driver_callback' ),
 			'revisr_database_settings',
 			'revisr_database_settings'
 		);

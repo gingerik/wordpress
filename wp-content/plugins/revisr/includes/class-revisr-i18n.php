@@ -1,19 +1,19 @@
 <?php
 /**
  * class-revisr-i18n.php
- * 
+ *
  * Defines the internationalization functionality.
  *
  * Loads and defines the internationalization files for this plugin
  * so that its ready for translation.
  *
- * @package   Revisr
- * @license   GPLv3
- * @link      https://revisr.io
- * @copyright 2014 Expanded Fronts, LLC
+ * @package   	Revisr
+ * @license   	GPLv3
+ * @link      	https://revisr.io
+ * @copyright 	Expanded Fronts, LLC
  */
 
-// Disallow direct access.
+// Prevent direct access.
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 class Revisr_i18n {
